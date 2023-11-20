@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  regression:
+  Regression:
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
@@ -20,6 +20,6 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: playwright-report
+        name: Allure Results
         path: artifacts/allure-results
         retention-days: 1
