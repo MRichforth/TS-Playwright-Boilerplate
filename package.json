@@ -1,19 +1,27 @@
 {
   "name": "ts-playwright-boilerplate",
   "version": "1.0.0",
-  "description": "Test",
-  "main": "index.js",
+  "description": "Boilerplate project for TS Playwright",
   "scripts": {
     "run-tests": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "AQA",
+    "TypeScript",
+    "Playwright"
+  ],
+  "author": "Maksym Kuznetsov",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "allure-playwright": "^2.9.2",
     "dotenv": "^16.3.1",
-    "allure-playwright": "^2.9.2"
+    "eslint": "^8.54.0",
+    "husky": "^8.0.0",
+    "typescript": "^5.3.2"
   }
 }
