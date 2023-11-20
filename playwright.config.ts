@@ -1,9 +1,11 @@
 import {defineConfig, devices} from '@playwright/test';
 import * as dotenv from 'dotenv';
+import {defaultTimeouts} from "./framework/pages";
 
 dotenv.config();
 
 export default defineConfig({
+    expect: {timeout: defaultTimeouts.short},
     outputDir: './artifacts',
     testDir: './specs',
     fullyParallel: !!process.env.CI,
