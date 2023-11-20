@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Boilerplate project for TS Playwright",
   "scripts": {
-    "run-tests": "npx playwright test specs",
+    "test-ab-testing": "npx playwright test specs/abTesting.spec.ts",
+    "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
   "keywords": [
