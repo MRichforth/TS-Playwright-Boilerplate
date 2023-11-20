@@ -1,18 +1,21 @@
-import { test, expect } from '@playwright/test';
+import {expect, test} from '@playwright/test';
+import {allure} from "allure-playwright";
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test.describe('TEST DESCRIBE', () => {
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+  test.afterEach(async() => {
+    await allure.epic('EPIC');
+    await allure.feature('FEATURE');
+    await allure.story('STORY');
+    await allure.suite('SUITE');
+  });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  test('has title', async ({ page }) => {
+    await page.goto('/');
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle('The Internet');
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  });
+
 });
