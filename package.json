@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "Test",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "run-tests": "npx playwright test specs",
+    "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.37.1"
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.2",
+    "dotenv": "^16.3.1",
+    "allure-playwright": "^2.9.2"
   }
 }
