@@ -37,8 +37,6 @@ test.describe('Available Examples - A/B Testing', () => {
 
         // Asserting page description
         await expect(abTestingPage.descriptionElement).toHaveText(abTestingPage.descriptionText);
-
-
     });
 
 });
