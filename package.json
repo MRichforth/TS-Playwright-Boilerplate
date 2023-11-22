@@ -6,6 +6,8 @@
     "test-ab-testing": "npx playwright test specs/abTesting.spec.ts",
     "test-add-remove-elements": "npx playwright test specs/addRemoveElements.spec.ts",
     "test-basic-auth": "npx playwright test specs/basicAuth.spec.ts",
+    "test-broken-images": "npx playwright test specs/brokenImages.spec.ts",
+    "test-challenging-dom": "npx playwright test specs/challengingDOM.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
