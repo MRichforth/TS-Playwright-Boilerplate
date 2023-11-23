@@ -1,7 +1,7 @@
 name: Playwright Regression Tests
-on:
-  pull_request:
-    branches: [ main, master ]
+#on:
+#  pull_request:
+#    branches: [ main, master ]
 jobs:
   Regression:
     timeout-minutes: 30
