@@ -13,6 +13,7 @@
     "test-digest-auth": "npx playwright test specs/digestAuthentication.spec.ts",
     "test-disappearing-elements": "npx playwright test specs/disappearingElements.spec.ts",
     "test-drag-and-drop": "npx playwright test specs/dragAndDrop.spec.ts",
+    "test-dropdown-list": "npx playwright test specs/dropdownList.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },

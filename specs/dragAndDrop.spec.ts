@@ -23,7 +23,7 @@ test.describe('Available Examples - Drag and Drop', () => {
         await allure.tags('drag and drop', 'ui');
     });
 
-    test('Drag and Drop ', async ({page}) => {
+    test('Drag and Drop', async ({page}) => {
         const dragAndDropPage = new DragAndDropPage(page);
 
         // Validating main page elements
