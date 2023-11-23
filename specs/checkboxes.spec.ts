@@ -35,10 +35,6 @@ test.describe('Available Examples - Checkboxes', () => {
 
         await checkboxesPage.tickCheckboxByName('checkbox 1', false);
         await checkboxesPage.tickCheckboxByName('checkbox 2', true);
-
-
-
-
     });
 
 });
