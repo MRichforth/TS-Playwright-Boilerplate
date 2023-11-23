@@ -55,4 +55,9 @@ export class BasePage {
         await this.page.waitForLoadState(state);
     }
 
+    @step('Dragging first element on place of second element')
+    async dragTo(firstLocator: Locator, secondLocator: Locator) {
+        await firstLocator.dragTo(secondLocator);
+    }
+
 }
