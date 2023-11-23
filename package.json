@@ -11,6 +11,7 @@
     "test-checkboxes": "npx playwright test specs/checkboxes.spec.ts",
     "test-context-menu": "npx playwright test specs/contextMenu.spec.ts",
     "test-digest-auth": "npx playwright test specs/digestAuthentication.spec.ts",
+    "test-disappearing-elements": "npx playwright test specs/disappearingElements.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
