@@ -23,7 +23,7 @@ test.describe('Available Examples - Disappearing Elements', () => {
         await allure.tags('elements', 'ui');
     });
 
-    test('Disappearing Elements ', async ({page}) => {
+    test('Disappearing Elements', async ({page}) => {
         const disappearingElementsPage = new DisappearingElementsPage(page);
 
         // Validating main page elements
