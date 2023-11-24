@@ -15,6 +15,7 @@
     "test-drag-and-drop": "npx playwright test specs/dragAndDrop.spec.ts",
     "test-dropdown-list": "npx playwright test specs/dropdownList.spec.ts",
     "test-dynamic-content": "npx playwright test specs/dynamicContent.spec.ts",
+    "test-dynamic-controls": "npx playwright test specs/dynamicControls.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
