@@ -20,7 +20,7 @@ test.describe('Available Examples - Dynamic Content', () => {
         await allure.story('Dynamic Content');
         await allure.suite('Dynamic Content scenarios');
         await allure.description("Check 'Dynamic Content' page functionality");
-        await allure.tags('dynamic content', 'ui');
+        await allure.tags('dynamic', 'ui');
     });
 
     test('Dynamic Content - Dynamic', async ({page}) => {
