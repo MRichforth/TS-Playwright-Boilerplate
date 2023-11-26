@@ -18,6 +18,7 @@
     "test-dynamic-controls": "npx playwright test specs/dynamicControls.spec.ts",
     "test-dynamic-loading": "npx playwright test specs/dynamicLoading.spec.ts",
     "test-entry-ad": "npx playwright test specs/entryAd.spec.ts",
+    "test-exit-intent": "npx playwright test specs/exitIntent.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
