@@ -26,8 +26,10 @@ test.describe('Available Examples - Entry Ad', () => {
     test('Entry Ad', async ({page}) => {
         const entryAdPage = new EntryAdPage(page);
 
+        // Waiting until entry ad is displayed
         await entryAdPage.waitForEntryModalState('visible');
 
+        // Validating entry ad content
         const entryModalContent: TEntryModalContentType = {
             title: "This is a modal window",
             body: "It's commonly used to encourage a user to take an action (e.g., give their e-mail address to sign up for something or disable their ad blocker).",
@@ -35,8 +37,10 @@ test.describe('Available Examples - Entry Ad', () => {
         };
         await entryAdPage.validateEntryModal(entryModalContent);
 
+        // Closing entry ad by clicking on "Close" button
         await entryAdPage.closeEntryAdModal();
 
+        // Waiting until entry ad is disappeared
         await entryAdPage.waitForEntryModalState('hidden');
 
         // Validating main page elements
