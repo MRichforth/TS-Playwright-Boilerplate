@@ -14,7 +14,7 @@ export class BasePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.titleElement = this.page.locator('//div/h3 | //h1[@class="heading"]');
+        this.titleElement = this.page.locator('//div/h3 | //h1[@class="heading"]').first();
         this.descriptionElement = this.page.locator('(//div[@class="example"]/h3/following-sibling::p)[1] | //div[@id="content"]//h2');
         this.formLinkElement = this.page.locator('//img[contains(@src, "fork")]');
         this.footerTitleElement = this.page.locator('//div[contains(@id, "footer")]//hr/following-sibling::div');
