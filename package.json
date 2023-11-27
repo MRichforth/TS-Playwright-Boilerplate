@@ -20,6 +20,7 @@
     "test-entry-ad": "npx playwright test specs/entryAd.spec.ts",
     "test-exit-intent": "npx playwright test specs/exitIntent.spec.ts",
     "test-file-download": "npx playwright test specs/fileDownload.spec.ts",
+    "test-file-upload": "npx playwright test specs/fileUpload.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
