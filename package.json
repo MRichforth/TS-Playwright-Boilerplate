@@ -22,6 +22,8 @@
     "test-file-download": "npx playwright test specs/fileDownload.spec.ts",
     "test-file-upload": "npx playwright test specs/fileUpload.spec.ts",
     "test-floating-menu": "npx playwright test specs/floatingMenu.spec.ts",
+    "test-forgot-password": "npx playwright test specs/forgotPassword.spec.ts",
+    "test-form-authentication": "npx playwright test specs/formAuthentication.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
