@@ -29,14 +29,18 @@ test.describe('Available Examples - File Upload', () => {
         // Validating main page elements
         await fileUploadPage.validatePage();
 
+        // Uploading test file into first input
         await fileUploadPage.uploadFileByPath('first', `${process.env.PWD}/framework/test.png`)
 
+        // Verifying that first input value contains the file name
         await fileUploadPage.checkInputValue('first', 'test.png');
 
         // Second input functionality cannot be implemented due to internal server error!
 
+        // Uploading test file into third input
         await fileUploadPage.uploadFileByPath('third', `${process.env.PWD}/framework/test.png`)
 
+        // Verifying that third input value contains the file name
         await fileUploadPage.checkInputValue('third', 'test.png');
     });
 
