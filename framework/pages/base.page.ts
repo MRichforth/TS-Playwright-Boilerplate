@@ -51,7 +51,7 @@ export class BasePage {
 
     @step('Clicking on section by name')
     async clickOnSectionByName(sectionName: TMainSections, state: TLoadStateTypes = "networkidle") {
-        await this.page.locator(`//a[contains(., "${sectionName}")]`).click();
+        await this.page.locator(`//a[contains(., "${sectionName}")]`).first().click();
         await this.page.waitForLoadState(state);
     }
 
