@@ -41,8 +41,14 @@ export class BasePage {
         await expect(this.formLinkElement).toBeVisible();
         await expect(this.footerTitleElement).toBeVisible();
         if (options) {
-            if (options.exclude !== 'title') await expect(this.titleElement).toBeVisible();
-            if (options.exclude !== 'description') await expect(this.descriptionElement).toBeVisible();
+            switch (options.exclude) {
+                case 'title':
+                    await expect(this.descriptionElement).toBeVisible();
+                    break;
+                case "description":
+                    await expect(this.titleElement).toBeVisible();
+                    break;
+            }
         } else {
             await expect(this.titleElement).toBeVisible();
             await expect(this.descriptionElement).toBeVisible();
