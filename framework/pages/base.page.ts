@@ -66,4 +66,17 @@ export class BasePage {
         await firstLocator.dragTo(secondLocator);
     }
 
+    @step('Waiting specific time')
+    async waitSpecificTime(timeout: number) {
+        await (async () => new Promise((res) => setTimeout(res, timeout)))();
+    }
+
+    @step('Scrolling page down')
+    async scrollPage(deltaX: number, deltaY: number, timeout?: number) {
+        if (timeout) {
+            await this.waitSpecificTime(timeout);
+        }
+        await this.page.mouse.wheel(deltaX, deltaY);
+    }
+
 }
