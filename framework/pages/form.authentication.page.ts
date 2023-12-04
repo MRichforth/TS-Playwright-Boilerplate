@@ -1,8 +1,8 @@
 import {expect, Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
-export class FormAuthenticationPage extends EntryAdPage {
+export class FormAuthenticationPage extends BasePage {
 
     readonly page: Page;
     readonly titleElement: Locator;

@@ -1,8 +1,8 @@
 import {expect, Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
-export class GeolocationPage extends EntryAdPage {
+export class GeolocationPage extends BasePage {
 
     readonly page: Page;
     readonly geolocationButtonElement: Locator;

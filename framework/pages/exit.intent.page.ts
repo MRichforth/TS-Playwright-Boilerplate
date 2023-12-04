@@ -1,8 +1,8 @@
 import {Page} from "@playwright/test";
 import {step} from "../helpers/allure.helper";
-import {EntryAdPage} from "./entry.ad.page";
+import {BasePage} from "./base.page";
 
-export class ExitIntentPage extends EntryAdPage {
+export class ExitIntentPage extends BasePage {
 
     readonly page: Page;
 

@@ -1,10 +1,10 @@
 import {expect, Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
 export type TInputTypes = 'first' | 'second' | 'third'
 
-export class FileUploadPage extends EntryAdPage {
+export class FileUploadPage extends BasePage {
 
     readonly page: Page;
     readonly firstInputElement: Locator;

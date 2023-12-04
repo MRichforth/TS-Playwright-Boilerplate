@@ -1,10 +1,10 @@
 import {expect, Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
 export type TFloatMenuItems = 'Home' | 'News' | 'Contact' | 'About'
 
-export class FloatingMenuPage extends EntryAdPage {
+export class FloatingMenuPage extends BasePage {
 
     readonly page: Page;
     readonly floatingMenuElement: Locator;
