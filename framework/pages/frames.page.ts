@@ -1,10 +1,10 @@
 import {expect, FrameLocator, Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
 export type TNestedFrameTypes = 'LEFT' | 'MIDDLE' | 'RIGHT' | 'BOTTOM';
 
-export class FramesPage extends EntryAdPage {
+export class FramesPage extends BasePage {
 
     readonly page: Page;
     // Nested Frames

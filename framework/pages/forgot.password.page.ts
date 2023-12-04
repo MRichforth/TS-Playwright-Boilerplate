@@ -1,8 +1,8 @@
 import {Locator, Page} from "@playwright/test";
-import {EntryAdPage} from "./entry.ad.page";
 import {step} from "../helpers/allure.helper";
+import {BasePage} from "./base.page";
 
-export class ForgotPasswordPage extends EntryAdPage {
+export class ForgotPasswordPage extends BasePage {
 
     readonly page: Page;
     readonly passwordInputElement: Locator;

@@ -20,7 +20,7 @@ test.describe('Available Examples - Horizontal Slider', () => {
         await allure.story('Horizontal Slider');
         await allure.suite('Horizontal Slider scenarios');
         await allure.description("Check 'Horizontal Slider' page functionality");
-        await allure.tags('geolocation', 'ui');
+        await allure.tags('slider', 'ui');
     });
 
     test('Horizontal Slider', async ({page}) => {
