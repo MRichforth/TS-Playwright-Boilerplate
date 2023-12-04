@@ -27,7 +27,7 @@ test.describe('Available Examples - Geolocation', () => {
         const geolocationPage = new GeolocationPage(page);
 
         // Validating main page elements
-        await geolocationPage.validatePage({exclude: 'description'});
+        await geolocationPage.validatePage();
 
         // Clicking on "Where am I?" button
         await geolocationPage.clickOnGeolocationButton();
