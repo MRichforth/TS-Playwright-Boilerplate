@@ -26,6 +26,7 @@
     "test-form-authentication": "npx playwright test specs/formAuthentication.spec.ts",
     "test-frames": "npx playwright test specs/frames.spec.ts",
     "test-geolocation": "npx playwright test specs/geolocation.spec.ts",
+    "test-horizontal-slider": "npx playwright test specs/horizontal.slider.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
