@@ -38,7 +38,12 @@ export default defineConfig({
                 ...devices['Desktop Chromium'],
                 launchOptions: {
                     args: ['--start-maximized']
-                }
+                },
+                geolocation: {
+                    longitude: 12.492507,
+                    latitude: 41.889938
+                },
+                permissions: ['geolocation'],
             }
         },
     ],
