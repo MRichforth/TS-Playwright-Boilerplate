@@ -1,6 +1,8 @@
 import {expect, Locator, Page} from "@playwright/test";
 import {TMainSections} from "./index";
 import {step} from "../helpers/allure.helper";
+import * as fs from "fs";
+import {constants} from "fs";
 
 export type TLoadStateTypes = "load" | "domcontentloaded" | "networkidle";
 
@@ -77,6 +79,33 @@ export class BasePage {
             await this.waitSpecificTime(timeout);
         }
         await this.page.mouse.wheel(deltaX, deltaY);
+    }
+
+    @step('Asserting if file exists by provided path')
+    async assertIfFileExists(path: string) {
+        fs.access(path, constants.F_OK, (err: Error | null) => {
+            console.log(`${path} ${err ? 'does not exist' : 'exists'}`);
+            expect(err).toBeNull();
+        });
+    }
+
+    @step('Downloading file by locator')
+    async downloadFileByLocator(downloadLink: Locator, path: string) {
+        const downloadPromise = this.page.waitForEvent('download');
+
+        await downloadLink.waitFor({state: 'visible'});
+        await downloadLink.click();
+
+        const download = await downloadPromise;
+        const downloadPath = path + download.suggestedFilename();
+        await download.saveAs(downloadPath);
+
+        await this.assertIfFileExists(downloadPath);
+    }
+
+    @step('Waiting until page loaded')
+    async waitUntilPageLoaded(state: TLoadStateTypes) {
+        await this.page.waitForLoadState(state);
     }
 
 }
