@@ -30,6 +30,7 @@
     "test-hovers": "npx playwright test specs/hovers.spec.ts",
     "test-infinite-scroll": "npx playwright test specs/infinite.scroll.spec.ts",
     "test-inputs": "npx playwright test specs/inputs.spec.ts",
+    "test-jquery-ui-menus": "npx playwright test specs/jQueryUIMenus.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
