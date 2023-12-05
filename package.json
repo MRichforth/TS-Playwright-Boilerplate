@@ -32,6 +32,7 @@
     "test-inputs": "npx playwright test specs/inputs.spec.ts",
     "test-jquery-ui-menus": "npx playwright test specs/jQueryUIMenus.spec.ts",
     "test-javascript-alerts": "npx playwright test specs/javaScriptAlerts.spec.ts",
+    "test-javascript-onload-event-error": "npx playwright test specs/javaScriptOnloadEventError.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
