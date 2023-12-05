@@ -108,4 +108,9 @@ export class BasePage {
         await this.page.waitForLoadState(state);
     }
 
+    @step('Reloading page')
+    async reloadPage(waitUntil: TLoadStateTypes = 'networkidle') {
+        await this.page.reload({waitUntil: waitUntil});
+    }
+
 }
