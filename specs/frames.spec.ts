@@ -23,21 +23,10 @@ test.describe('Available Examples - Frames', () => {
         await allure.tags('frames', 'ui');
     });
 
-    test('Form Authentication - Nested Frames', async ({page}) => {
-        const framesPage = new FramesPage(page);
-
-        // Validating main page elements
-        await framesPage.validatePage({exclude: 'description'});
-
-        // Clicking on "Nested Frames" button
-        await framesPage.clickOnNestedFramesButton();
-
-        // Validating nested frames
-        await framesPage.validateNestedFrame('LEFT');
-        await framesPage.validateNestedFrame('MIDDLE');
-        await framesPage.validateNestedFrame('RIGHT');
-        await framesPage.validateNestedFrame('BOTTOM');
-    });
+    /**
+     * Due to the fact that "Nested Frames" button of the "Frames" section leads to a separate "Nested Frames" section,
+     * the test for this functionality has been moved to a separate spec file
+     */
 
     test('Form Authentication - iFrame', async ({page}) => {
         const framesPage = new FramesPage(page);
