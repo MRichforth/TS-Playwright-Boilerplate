@@ -113,4 +113,30 @@ export class BasePage {
         await this.page.reload({waitUntil: waitUntil});
     }
 
+    @step('Opening provided link in a new browser tab')
+    async openLinkInNewTab(link: Locator) {
+        const pageContext = this.page.context();
+        const pagePromise = pageContext.waitForEvent('page');
+
+        await link.waitFor({state: 'visible'});
+        await link.click();
+
+        const newPage = await pagePromise;
+        await newPage.waitForLoadState('networkidle');
+
+        return newPage;
+    }
+
+    @step('Switching to the browser tab')
+    async switchToTab(tabIndex: number) {
+        const pages = this.page.context().pages();
+
+        if (tabIndex >= 0 && tabIndex < pages.length) {
+            await pages[tabIndex].bringToFront();
+        } else {
+            throw new Error(`Invalid tab index: "${tabIndex}"`);
+        }
+
+    }
+
 }
