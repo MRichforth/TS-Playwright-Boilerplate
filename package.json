@@ -36,6 +36,7 @@
     "test-key-presses": "npx playwright test specs/keyPresses.spec.ts",
     "test-large-and-deep-dom": "npx playwright test specs/largeAndDeepDOM.spec.ts",
     "test-multiple-windows": "npx playwright test specs/multipleWindows.spec.ts",
+    "test-nested-frames": "npx playwright test specs/nestedFrames.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
