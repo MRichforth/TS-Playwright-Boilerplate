@@ -26,7 +26,7 @@ test.describe('Available Examples - Shadow DOM', () => {
     test('Shadow DOM', async ({page}) => {
         const shadowDOMPage = new ShadowDOMPage(page);
 
-        // Validating nested frames
+        // Validating main page elements
         await shadowDOMPage.validatePage({exclude: 'description'});
 
         // Asserting that text is displayed

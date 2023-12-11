@@ -41,6 +41,7 @@
     "test-redirect-link": "npx playwright test specs/redirectLink.spec.ts",
     "test-secure-file-download": "npx playwright test specs/secureFileDownload.spec.ts",
     "test-shadow-dom": "npx playwright test specs/shadowDOM.spec.ts",
+    "test-shifting-content": "npx playwright test specs/shiftingContent.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
