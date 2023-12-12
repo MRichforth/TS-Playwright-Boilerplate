@@ -43,6 +43,7 @@
     "test-shadow-dom": "npx playwright test specs/shadowDOM.spec.ts",
     "test-shifting-content": "npx playwright test specs/shiftingContent.spec.ts",
     "test-slow-resources": "npx playwright test specs/slowResources.spec.ts",
+    "test-sortable-data-tables": "npx playwright test specs/sortableDataTables.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
