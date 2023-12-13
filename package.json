@@ -45,6 +45,7 @@
     "test-slow-resources": "npx playwright test specs/slowResources.spec.ts",
     "test-sortable-data-tables": "npx playwright test specs/sortableDataTables.spec.ts",
     "test-status-codes": "npx playwright test specs/statusCodes.spec.ts",
+    "test-typos": "npx playwright test specs/typos.spec.ts",
     "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
   },
