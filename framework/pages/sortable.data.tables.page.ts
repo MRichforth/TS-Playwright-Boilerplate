@@ -152,13 +152,13 @@ export class SortableDataTablesPage extends BasePage {
             const columnValuesArray = await this.getTableColumnValues(column, table);
 
             // Sorting column values according to sorting type and creating expected values
-            const sortedColumnValuesArray = columnValuesArray
-                .slice()
-                .sort((a, b) => {
-                    const numA = parseFloat(a.replace('$', '') || '0');
-                    const numB = parseFloat(b.replace('$', '') || '0');
-                    return type === 'ASC' ? numA - numB : numB - numA;
-                });
+            const sortedColumnValuesArray = [...columnValuesArray].sort((a: string, b: string) => {
+                if (a.includes("$")) {
+                    return type === 'ASC' ? parseFloat(a.slice(1)) - parseFloat(b.slice(1)) : parseFloat(b.slice(1)) - parseFloat(a.slice(1));
+                } else {
+                    return type === 'ASC' ? a.localeCompare(b) : b.localeCompare(a);
+                }
+            });
 
             // Asserting sorting
             expect(columnValuesArray).toEqual(sortedColumnValuesArray);

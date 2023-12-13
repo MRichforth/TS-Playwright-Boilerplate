@@ -30,13 +30,14 @@ test.describe('Available Examples - Slow Resources', () => {
 
         // Creating response handler
         const slowResourcesPage = new SlowResourcesPage(page);
-        const responsePromise = slowResourcesPage.createResponseHandler();
+        const responsePromise = slowResourcesPage.createResponseHandler(slowResourcesPage.slowExternalUrl);
 
         // Clicking on specific section button
         await slowResourcesPage.clickOnSectionByName('Slow Resources');
 
         // Asserting required network response
         const responseData: TNetworkResponseType = {
+            url: slowResourcesPage.slowExternalUrl,
             status: 503,
             statusText: 'Service Unavailable'
         }

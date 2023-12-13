@@ -5,6 +5,7 @@ import {step} from "../helpers/allure.helper";
 import {TMainSections} from "./index";
 
 export type TNetworkResponseType = {
+    url: string,
     status: number,
     statusText: string
 }
@@ -12,17 +13,17 @@ export type TNetworkResponseType = {
 export class SlowResourcesPage extends BasePage {
 
     readonly page: Page;
-    readonly expectedUrl: string;
+    readonly slowExternalUrl: string;
 
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.expectedUrl = 'https://the-internet.herokuapp.com/slow_external';
+        this.slowExternalUrl = 'https://the-internet.herokuapp.com/slow_external';
     }
 
     @step('Creating response handler')
-    async createResponseHandler(responseTimeout = 40000) {
-        return this.page.waitForResponse(this.expectedUrl, {timeout: responseTimeout});
+    async createResponseHandler(url: string, responseTimeout = 40000) {
+        return this.page.waitForResponse(url, {timeout: responseTimeout});
     }
 
     @step('Clicking on section by name')
@@ -37,7 +38,7 @@ export class SlowResourcesPage extends BasePage {
          * so it was decided to use "any" type
          */
         const response = await responsePromise
-        expect(response.url()).toEqual(this.expectedUrl);
+        expect(response.url()).toEqual(expectedData.url);
         expect(response.status()).toEqual(expectedData.status);
         expect(response.statusText()).toEqual(expectedData.statusText);
     }
