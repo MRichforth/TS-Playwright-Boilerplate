@@ -7,3 +7,5 @@ test-rebase-3
 test-rebase-4
 test-rebase-5
 test-rebase-6
+test-rebase-7
+test-rebase-8
