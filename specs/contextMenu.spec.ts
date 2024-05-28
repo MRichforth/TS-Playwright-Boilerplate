@@ -36,4 +36,17 @@ test.describe('Available Examples - Context Menu', () => {
         await contextMenuPage.rightClickOnContextMenu();
     });
 
+    test('Test1', async ({page}) => {
+        const contextMenuPage = new ContextMenuPage(page);
+
+        // Validating main page elements
+        await contextMenuPage.validatePage({exclude: 'description'});
+
+        // Creating listener for dialog box
+        await contextMenuPage.handleDialogBox();
+
+        // Right-clicking on dialog trigger button
+        await contextMenuPage.rightClickOnContextMenu();
+    });
+
 });
