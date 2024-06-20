@@ -28,7 +28,8 @@ test.describe('Available Examples - Frames', () => {
      * the test for this functionality has been moved to a separate spec file
      */
 
-    test('Form Authentication - iFrame', async ({page}) => {
+    // TODO: Currently, an error is displayed on UI "TinyMCE is in read-only mode because you have no more editor loads available this month."
+    test.fixme('Form Authentication - iFrame', async ({page}) => {
         const framesPage = new FramesPage(page);
 
         // Validating main page elements
