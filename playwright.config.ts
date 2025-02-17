@@ -15,19 +15,16 @@ export default defineConfig({
     workers: process.env.CI ? 1 : 1,
     snapshotDir: './framework/snapshots',
     reporter: [
+        [process.env.CI ? 'github' : 'dot'],
         ['line'],
-        ['allure-playwright',
-            {
-                detail: false,
-                outputFolder: './artifacts/allure-results'
-            }
-        ]
+        ['html', { open: 'never', outputFolder: 'playwright-report' }],
+        ['allure-playwright', { detail: false, resultsDir: 'allure-results'} ]
     ],
     use: {
-        baseURL: 'https://the-internet.herokuapp.com',
+        baseURL: process.env.ENV_URL ? process.env.ENV_URL: 'http://localhost-app:5000',
         headless: !!process.env.CI,
         viewport: process.env.CI ? {height: 1080, width: 1920} : null,
-        trace: process.env.CI ? 'retry-with-trace' : 'off',
+        trace: process.env.CI ? 'retry-with-trace' : 'on',
         screenshot: process.env.CI ? 'only-on-failure' : 'off',
         video: process.env.CI ? 'retry-with-video' : 'off',
     },

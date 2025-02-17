@@ -6,3 +6,4 @@ node_modules/
 artifacts/
 allure-results/
 allure-report/
+.idea
