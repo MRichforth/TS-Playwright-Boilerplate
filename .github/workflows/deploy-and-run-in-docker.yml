@@ -1,0 +1,35 @@
+name: (Docker-compose) Playwright Regression Tests
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-and-run:
+    runs-on: [self-hosted, linux, X64]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Compose
+        run: |
+          docker compose version
+
+      - name: Deploy app & run tests
+        run: |
+          docker compose up --abort-on-container-exit
+
+      - name: Upload Run Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Run Artifacts
+          path: |
+            allure-results
+            playwright-report
+            artifacts
+          retention-days: 1
+
+      - name: Cleanup Services
+        if: always()
+        run: |
+          docker compose down

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  localhost-app:
+    image: gprestes/the-internet
+    container_name: localhost-app
+    ports:
+      - "7080:5000"
+    restart: always
+
+  playwright-tests:
+    image: mcr.microsoft.com/playwright:latest
+    container_name: playwright-tests
+    depends_on:
+      - localhost-app
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        npm ci &&
+        npx playwright install &&
+        npx playwright test specs/addRemoveElements.spec.ts
+    environment:
+      - CI=true
