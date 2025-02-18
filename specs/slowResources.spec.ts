@@ -38,8 +38,8 @@ test.describe('Available Examples - Slow Resources', () => {
         // Asserting required network response
         const responseData: TNetworkResponseType = {
             url: slowResourcesPage.slowExternalUrl,
-            status: 503,
-            statusText: 'Service Unavailable'
+            status: 200,
+            statusText: 'OK'
         }
         await slowResourcesPage.assertResponseData(responsePromise, responseData);
 
