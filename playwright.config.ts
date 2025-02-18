@@ -18,7 +18,7 @@ export default defineConfig({
         [process.env.CI ? 'github' : 'dot'],
         ['line'],
         ['html', { open: 'never', outputFolder: 'playwright-report' }],
-        ['allure-playwright', { detail: false, resultsDir: 'allure-results'} ]
+        ['allure-playwright', { resultsDir: 'allure-results'} ]
     ],
     use: {
         baseURL: process.env.ENV_URL ? process.env.ENV_URL: 'http://localhost-app:5000',

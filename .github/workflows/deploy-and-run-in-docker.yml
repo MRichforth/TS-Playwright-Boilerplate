@@ -80,16 +80,16 @@ jobs:
           path: merged-allure-results
 
       - name: Download current history files from S3
-        run: aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/history/ ./merged-allure-results/history --recursive
+        run: aws s3 cp s3://mkuznetsov-github/history/ ./merged-allure-results/history --recursive
 
       - name: Generate Allure report
         run: allure generate ./merged-allure-results
 
       - name: Backup the history with the latest data
-        run: aws s3 cp ./allure-report/history s3://${{ secrets.AWS_S3_BUCKET }}/history/  --recursive
+        run: aws s3 cp ./allure-report/history s3://mkuznetsov-github/history/  --recursive
 
       - name: Deploy html report to S3
-        run: aws s3 cp ./allure-report s3://${{ secrets.AWS_S3_BUCKET }}/report/${{ steps.timestampid.outputs.timestamp }}/ --recursive
+        run: aws s3 cp ./allure-report s3://mkuznetsov-github/report/${{ steps.timestampid.outputs.timestamp }}/ --recursive
 
       - name: Write URL in summary
-        run: echo "### [Allure results] http://${{ secrets.AWS_S3_BUCKET_URL }}/report/${{ steps.timestampid.outputs.timestamp }}/index.html" >> $GITHUB_STEP_SUMMARY
+        run: echo "### [Allure results] http://mkuznetsov-github.s3-website.eu-north-1.amazonaws.com/report/${{ steps.timestampid.outputs.timestamp }}/index.html" >> $GITHUB_STEP_SUMMARY

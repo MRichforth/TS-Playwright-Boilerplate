@@ -78,7 +78,7 @@ export class JavaScriptAlertsPage extends BasePage {
         const resultTextValue = await this.resultTextElement.textContent();
         switch (resultType) {
             case "Alert":
-                expect(resultTextValue).toEqual('You successfully clicked an alert');
+                expect(resultTextValue).toEqual('You successfuly clicked an alert');
                 break;
             case "Confirm":
                 expect(resultTextValue).toEqual('You clicked: Ok');
