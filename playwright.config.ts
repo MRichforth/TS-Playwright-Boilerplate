@@ -24,7 +24,7 @@ export default defineConfig({
         baseURL: process.env.ENV_URL ? process.env.ENV_URL: 'http://localhost-app:5000',
         headless: !!process.env.CI,
         viewport: process.env.CI ? {height: 1080, width: 1920} : null,
-        trace: process.env.CI ? 'retry-with-trace' : 'on',
+        trace: process.env.CI ? 'retry-with-trace' : 'off',
         screenshot: process.env.CI ? 'only-on-failure' : 'off',
         video: process.env.CI ? 'retry-with-video' : 'off',
     },
