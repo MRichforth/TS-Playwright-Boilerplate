@@ -20,8 +20,15 @@ jobs:
           docker compose version
 
       - name: Deploy app & run tests
-        run: |
-          docker compose up --abort-on-container-exit
+        run: docker compose up --abort-on-container-exit
+
+      - name: Cache Snapshot folder
+        uses: actions/cache@v4
+        with:
+          path: ./snapshots/shiftingContent.spec.ts-snapshots/**
+          key: snapshots-shiftingContent.spec.ts-snapshots-${{ runner.os }}-${{ hashFiles('snapshots/shiftingContent.spec.ts-snapshots/**') }}
+          restore-keys: |
+            snapshots-shiftingContent.spec.ts-snapshots-${{ runner.os }}-
 
       - name: Upload Allure Results Artifact
         uses: actions/upload-artifact@v4

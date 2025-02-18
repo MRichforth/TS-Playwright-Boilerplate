@@ -13,7 +13,7 @@ export default defineConfig({
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 1 : 0,
     workers: process.env.CI ? 1 : 1,
-    snapshotDir: './framework/snapshots',
+    snapshotDir: './snapshots',
     reporter: [
         [process.env.CI ? 'github' : 'dot'],
         ['line'],

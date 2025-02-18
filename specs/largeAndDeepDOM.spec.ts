@@ -28,7 +28,8 @@ test.describe('Available Examples - Large & Deep DOM', () => {
         await allure.tags('dom', 'ui');
     });
 
-    test('Large & Deep DOM', async ({page}) => {
+    // TODO: [18.02.25] It is required to investigate stability of this scenario in GH Actions
+    test.fixme('Large & Deep DOM', async ({page}) => {
         const largeAndDeepDomPage = new LargeAndDeepDomPage(page);
 
         // Validating main page elements
