@@ -1,5 +1,6 @@
 # Overview [![Playwright Tests](https://github.com/MRichforth/TS-Playwright-Boilerplate/actions/workflows/deploy-and-run-in-docker.yml/badge.svg?branch=main)](https://github.com/MRichforth/TS-Playwright-Boilerplate/blob/main/.github/workflows/deploy-and-run-in-docker.yml)
 ***
+
 ## Technologies Stack
 
 Colons can be used to align columns.
