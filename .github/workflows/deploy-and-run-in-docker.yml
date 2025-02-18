@@ -46,14 +46,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Cache Snapshot folder
-        uses: actions/cache@v4
-        with:
-          path: snapshots
-          key: snapshots-${{ runner.os }}-${{ hashFiles('snapshots') }}
-          restore-keys: |
-            snapshots-${{ runner.os }}-
-
       - name: Set up Docker Compose
         run: docker compose version
 
