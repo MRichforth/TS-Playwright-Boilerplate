@@ -1,5 +1,10 @@
 name: (Docker-compose) Playwright Regression Tests
+
 on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
   workflow_dispatch:
 
 jobs:
