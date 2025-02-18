@@ -7,3 +7,4 @@ artifacts/
 allure-results/
 allure-report/
 .idea
+/snapshots/

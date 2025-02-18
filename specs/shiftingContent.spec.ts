@@ -1,9 +1,10 @@
 import {test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {ShiftingContentPage} from "../framework/pages/shifting.content.page";
 
-test.describe('Available Examples - Shifting Content', () => {
+// TODO: [18.02.25] This scenario is not included in the overall results due to specifics of cache uploading when working with docker-compose files
+test.describe.fixme('Available Examples - Shifting Content', () => {
 
     let basePage: BasePage;
 

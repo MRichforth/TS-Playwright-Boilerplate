@@ -1,8 +1,7 @@
 /* eslint @typescript-eslint/no-explicit-any: "off" */
 /* eslint @typescript-eslint/no-unused-vars: "off" */
 import {test} from "@playwright/test";
-import {allure} from "allure-playwright";
-import {ContentType} from "allure-js-commons";
+import * as allure from "allure-js-commons";
 
 export function step(name: string) {
     return function actualDecorator(originalMethod: any, _context: ClassMethodDecoratorContext) {
@@ -11,7 +10,7 @@ export function step(name: string) {
             await test.step(name, async () => {
                 if (args.length) {
                     args.forEach((arg) => {
-                        allure.attachment('STEP ARGUMENT:', JSON.stringify(arg, null, 4), ContentType.JSON);
+                        allure.attachment('STEP ARGUMENT:', JSON.stringify(arg, null, 4), allure.ContentType.JSON);
                     });
                 }
                 result = originalMethod.call(this, ...args);

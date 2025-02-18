@@ -1,5 +1,5 @@
 import {test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {FloatingMenuPage} from "../framework/pages/floating.menu.page";
 import {CommonAssertionsHelper} from "../framework/helpers/common.assertions.helper";

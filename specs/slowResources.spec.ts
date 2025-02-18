@@ -1,6 +1,6 @@
 /* eslint @typescript-eslint/no-unused-vars: "off" */
 import {test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {SlowResourcesPage, TNetworkResponseType} from "../framework/pages/slow.resources.page";
 
@@ -38,8 +38,8 @@ test.describe('Available Examples - Slow Resources', () => {
         // Asserting required network response
         const responseData: TNetworkResponseType = {
             url: slowResourcesPage.slowExternalUrl,
-            status: 503,
-            statusText: 'Service Unavailable'
+            status: 200,
+            statusText: 'OK'
         }
         await slowResourcesPage.assertResponseData(responsePromise, responseData);
 

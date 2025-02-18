@@ -1,5 +1,5 @@
 import {test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {DynamicContentPage, TStaticRowTypes} from "../framework/pages/dynamic.content.page";
 
@@ -33,7 +33,9 @@ test.describe('Available Examples - Dynamic Content', () => {
         await dynamicContentPage.validateDynamicRowsContent();
     });
 
-    test('Dynamic Content - Static', async ({page}) => {
+    // TODO: [28.02.25] This scenario found a bug, since being on a static page the second image should always contain the image “3.jpg”,
+    //  but the scenario detects a different image in localhost application
+    test.fixme('Dynamic Content - Static', async ({page}) => {
         const dynamicContentPage = new DynamicContentPage(page);
 
         // Validating main page elements

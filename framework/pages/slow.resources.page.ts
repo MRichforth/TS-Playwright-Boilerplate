@@ -18,7 +18,7 @@ export class SlowResourcesPage extends BasePage {
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.slowExternalUrl = 'https://the-internet.herokuapp.com/slow_external';
+        this.slowExternalUrl = process.env.ENV_URL ? `${process.env.ENV_URL}/slow_external`: 'http://localhost-app:5000/slow_external';
     }
 
     @step('Creating response handler')

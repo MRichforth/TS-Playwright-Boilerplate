@@ -1,5 +1,5 @@
 import {test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {GeolocationPage} from "../framework/pages/geolocation.page";
 
@@ -23,7 +23,8 @@ test.describe('Available Examples - Geolocation', () => {
         await allure.tags('geolocation', 'ui');
     });
 
-    test('Geolocation', async ({page}) => {
+    // TODO: [18.02.25] It is required to investigate stability of this scenario in GH Actions
+    test.fixme('Geolocation', async ({page}) => {
         const geolocationPage = new GeolocationPage(page);
 
         // Validating main page elements

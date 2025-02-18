@@ -1,5 +1,5 @@
 import {expect, test} from '@playwright/test';
-import {allure} from "allure-playwright";
+import * as allure from "allure-js-commons";
 import {BasePage} from "../framework/pages/base.page";
 import {CommonHelper} from "../framework/helpers/common.helper";
 import {BasicAuthPage} from "../framework/pages/basic.auth.page";
