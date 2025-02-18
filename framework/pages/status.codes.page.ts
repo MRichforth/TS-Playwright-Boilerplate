@@ -16,7 +16,7 @@ export class StatusCodesPage extends SlowResourcesPage {
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.baseUrl = 'https://the-internet.herokuapp.com/status_codes'
+        this.baseUrl = process.env.ENV_URL ? `${process.env.ENV_URL}/status_codes`: 'http://localhost-app:5000/status_codes';
         this.successfulStatusCodeUrl = `${this.baseUrl}/200`;
         this.redirectionStatusCodeUrl = `${this.baseUrl}/301`;
         this.clientErrorStatusCodeUrl = `${this.baseUrl}/404`;
