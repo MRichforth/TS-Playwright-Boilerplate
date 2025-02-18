@@ -20,6 +20,6 @@ services:
     command:
       - |
         npm ci &&
-        npm run test-shifting-content
+        npm run test-regression-run
     environment:
       - CI=true

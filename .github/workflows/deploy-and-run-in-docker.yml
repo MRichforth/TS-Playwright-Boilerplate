@@ -8,29 +8,59 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  lint:
+    runs-on: [ self-hosted, linux, X64 ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache Node.js Modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint .
+        continue-on-error: false
+
   deploy-and-run:
+    if: always()
+    needs: [ lint ]
     runs-on: [ self-hosted, linux, X64 ]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Cache Snapshot folder
+        uses: actions/cache@v4
+        with:
+          path: snapshots
+          key: snapshots-${{ runner.os }}-${{ hashFiles('snapshots') }}
+          restore-keys: |
+            snapshots-${{ runner.os }}-
+
       - name: Set up Docker Compose
-        run: |
-          docker compose version
+        run: docker compose version
 
       - name: Deploy app & run tests
         run: docker compose up --abort-on-container-exit
 
-      - name: Cache Snapshot folder
-        uses: actions/cache@v4
-        with:
-          path: ./snapshots/shiftingContent.spec.ts-snapshots/**
-          key: snapshots-shiftingContent.spec.ts-snapshots-${{ runner.os }}-${{ hashFiles('snapshots/shiftingContent.spec.ts-snapshots/**') }}
-          restore-keys: |
-            snapshots-shiftingContent.spec.ts-snapshots-${{ runner.os }}-
-
-      - name: Upload Allure Results Artifact
+      - name: Upload Allure Results
         uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -38,7 +68,7 @@ jobs:
           path: allure-results
           retention-days: 1
 
-      - name: Upload Playwright Report Artifact
+      - name: Upload Playwright Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -46,7 +76,7 @@ jobs:
           path: playwright-report
           retention-days: 1
 
-      - name: Upload Artifacts Directory Artifact
+      - name: Upload Artifacts Directory
         uses: actions/upload-artifact@v4
         if: always()
         with:
