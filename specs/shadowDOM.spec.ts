@@ -26,8 +26,6 @@ test.describe('Available Examples - Shadow DOM', () => {
     test('Shadow DOM', async ({page}) => {
         const shadowDOMPage = new ShadowDOMPage(page);
 
-        const test = 'test'
-
         // Validating main page elements
         await shadowDOMPage.validatePage({exclude: 'description'});
 
