@@ -7,7 +7,7 @@
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Amazon S3](https://img.shields.io/badge/Amazon%20S3-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 This boilerplate project was implemented in order to create a code base for the Playwright framework and to demonstrate functionality provided by the framework, as well as to investigate possibilities of integrating TypeScript programming language and Playwright automation framework with GitHub actions.
 
@@ -64,15 +64,22 @@ The following variables should be added to the .env file for this project to wor
   - Contains all github workflow yaml files for using GitHub Actions.
 - [**.husky**](.husky) folder
   - Contains a file that is responsible for executing any command specified in this file in the pre-commit hook.
-- [**spec**](specs) folder
-     - In this folder are created spec files that contain scenarios in the order corresponding to sections of the web application The Internet
- - [**framework**](framework) folder
-   - [**helpers**](framework/helpers) folder
-     - Contains all related files required for configuration and correct functioning of the project.
-    - [**pages**](framework/pages) folder
-      - Contains page files that include classes and methods in the order corresponding to the spec files and sections of The Internet web application.
-   - [**testData**](framework/testData) folder
-     - Contains files used in the process of test execution
+
+[//]: # (- [**spec**]&#40;specs&#41; folder)
+
+[//]: # (     - In this folder are created spec files that contain scenarios in the order corresponding to sections of the web application The Internet)
+
+[//]: # ( - [**framework**]&#40;framework&#41; folder)
+
+[//]: # (   - [**helpers**]&#40;framework/helpers&#41; folder)
+
+[//]: # (     - Contains all related files required for configuration and correct functioning of the project.)
+
+[//]: # (    - [**pages**]&#40;framework/pages&#41; folder)
+
+[//]: # (      - Contains page files that include classes and methods in the order corresponding to the spec files and sections of The Internet web application.)
+- [**src**](src) folder
+  - Contains files used in the process of test execution
  - [**docker-compose.yaml**](docker-compose.yml)
    - Responsible for local deployment and running tests using Docker
 

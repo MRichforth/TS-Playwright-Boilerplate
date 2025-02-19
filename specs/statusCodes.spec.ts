@@ -1,8 +1,8 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {StatusCodesPage} from "../framework/pages/status.codes.page";
-import {TNetworkResponseType} from "../framework/pages/slow.resources.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {StatusCodesPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/status.codes.page";
+import {TNetworkResponseType} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/slow.resources.page";
 
 test.describe('Available Examples - Status Codes', () => {
 

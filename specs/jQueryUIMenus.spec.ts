@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {JQueryUIMenusPage} from "../framework/pages/jquery.ui.menus.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {JQueryUIMenusPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/jquery.ui.menus.page";
 
 test.describe('Available Examples - JQuery UI Menus', () => {
 

@@ -1,12 +1,12 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
 import {
     LargeAndDeepDomPage,
     TNoSiblingsData,
     TSiblingData,
     TTableData
-} from "../framework/pages/large.and.deep.dom.page";
+} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/large.and.deep.dom.page";
 
 test.describe('Available Examples - Large & Deep DOM', () => {
 

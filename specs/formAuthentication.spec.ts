@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {FormAuthenticationPage} from "../framework/pages/form.authentication.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FormAuthenticationPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/form.authentication.page";
 
 test.describe('Available Examples - Form Authentication', () => {
 

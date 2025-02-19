@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {FileUploadPage} from "../framework/pages/file.upload.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FileUploadPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/file.upload.page";
 
 test.describe('Available Examples - File Upload', () => {
 
@@ -30,7 +30,7 @@ test.describe('Available Examples - File Upload', () => {
         await fileUploadPage.validatePage();
 
         // Uploading test file into first input
-        await fileUploadPage.uploadFileByPath('first', `${process.env.PWD}/framework/testData/test.png`)
+        await fileUploadPage.uploadFileByPath('first', `${process.env.PWD}/src/test.png`)
 
         // Verifying that first input value contains the file name
         await fileUploadPage.checkInputValue('first', 'test.png');
@@ -38,7 +38,7 @@ test.describe('Available Examples - File Upload', () => {
         // Second input functionality cannot be implemented due to internal server error!
 
         // Uploading test file into third input
-        await fileUploadPage.uploadFileByPath('third', `${process.env.PWD}/framework/testData/test.png`)
+        await fileUploadPage.uploadFileByPath('third', `${process.env.PWD}/src/test.png`)
 
         // Verifying that third input value contains the file name
         await fileUploadPage.checkInputValue('third', 'test.png');

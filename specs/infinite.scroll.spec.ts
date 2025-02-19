@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {InfiniteScrollPage} from "../framework/pages/infinite.scroll.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {InfiniteScrollPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/infinite.scroll.page";
 
 test.describe('Available Examples - Infinite Scroll', () => {
 

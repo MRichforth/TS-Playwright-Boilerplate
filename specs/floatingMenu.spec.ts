@@ -1,8 +1,8 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {FloatingMenuPage} from "../framework/pages/floating.menu.page";
-import {CommonAssertionsHelper} from "../framework/helpers/common.assertions.helper";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FloatingMenuPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/floating.menu.page";
+import {CommonAssertionsHelper} from "@mrichforth/ts-playwright-boilerplate-framework/dist/helpers/common.assertions.helper";
 
 test.describe('Available Examples - Floating Menu', () => {
 

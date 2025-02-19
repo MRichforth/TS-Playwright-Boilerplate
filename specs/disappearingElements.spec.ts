@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {DisappearingElementsPage} from "../framework/pages/disappearing.elements.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {DisappearingElementsPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/disappearing.elements.page";
 
 test.describe('Available Examples - Disappearing Elements', () => {
 

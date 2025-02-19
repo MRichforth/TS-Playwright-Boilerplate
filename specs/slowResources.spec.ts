@@ -1,8 +1,8 @@
 /* eslint @typescript-eslint/no-unused-vars: "off" */
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {SlowResourcesPage, TNetworkResponseType} from "../framework/pages/slow.resources.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {SlowResourcesPage, TNetworkResponseType} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/slow.resources.page";
 
 test.describe('Available Examples - Slow Resources', () => {
 

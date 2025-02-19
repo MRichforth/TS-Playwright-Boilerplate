@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {DropdownListPage} from "../framework/pages/dropdown.list.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {DropdownListPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/dropdown.list.page";
 
 test.describe('Available Examples - Dropdown List', () => {
 

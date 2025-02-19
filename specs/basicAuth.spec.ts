@@ -1,8 +1,8 @@
 import {expect, test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {CommonHelper} from "../framework/helpers/common.helper";
-import {BasicAuthPage} from "../framework/pages/basic.auth.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {CommonHelper} from "@mrichforth/ts-playwright-boilerplate-framework/dist/helpers/common.helper";
+import {BasicAuthPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/basic.auth.page";
 
 test.describe('Available Examples - Basic Auth', () => {
 
