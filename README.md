@@ -61,7 +61,7 @@ The following variables should be added to the .env file for this project to wor
 ## Project structure
 
 - [**.github**](.github) folder
-  - Contains all github workflow yaml files for using Github Actions.
+  - Contains all github workflow yaml files for using GitHub Actions.
 - [**.husky**](.husky) folder
   - Contains a file that is responsible for executing any command specified in this file in the pre-commit hook.
 - [**spec**](specs) folder
