@@ -21,6 +21,7 @@ Also during the process of working on this project the following goals were set:
 
 ## Technologies Stack
 
+The following technologies were used to develop the project:
  - **Programming Language**: `TypeScript`
  - **Automation Framework**: `Playwright`
  - **Reporting tool**: `Allure`, `Playwright`
@@ -32,12 +33,28 @@ Also during the process of working on this project the following goals were set:
 
 ### Project configuration
 
- - Git clone
- - npm install
- - npx playwright install
+In order to start executing automated scenarios, the following steps should be performed:
+1. Clone repository
+```
+git clone https://github.com/MRichforth/TS-Playwright-Boilerplate.git
+```
 
- .env creation
+2. Install packages
+```
+npm install
+```
+3. Install Playwright framework
+```
+npx playwright install
+```
+4. Create `.env` file 
 
+The following variables should be added to the .env file for this project to work successfully:
+
+| **NAME**   |                       **VALUE**                       | **Required** |                                                                                                                                                                      **Purpose**              |
+|------------|:-----------------------------------------------------:|-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| `CI`       |                        `true`                         |        false |                                                                                                                                              Responsible for running tests in `HEADLESS` mode |
+| `ENV_URL`  | **https://the-internet.herokuapp.com** or `localhost` |         true | Responsible for URL of web application to be tested. In case the environment is deployed using Docker on your local machine, you need to specify the port, for example http://localhost:7080. |
 
 ***
 
