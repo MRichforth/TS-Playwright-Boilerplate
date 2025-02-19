@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {FramesPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/frames.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FramesPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/frames.page";
 
 test.describe('Available Examples - Frames', () => {
 

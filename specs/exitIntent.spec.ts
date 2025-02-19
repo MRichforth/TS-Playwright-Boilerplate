@@ -1,8 +1,8 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {TEntryModalContentType} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/entry.ad.page";
-import {ExitIntentPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/exit.intent.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {TEntryModalContentType} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/entry.ad.page";
+import {ExitIntentPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/exit.intent.page";
 
 test.describe('Available Examples - Exit Intent', () => {
 

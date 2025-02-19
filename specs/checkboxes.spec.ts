@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {CheckboxesPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/checkboxes.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {CheckboxesPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/checkboxes.page";
 
 test.describe('Available Examples - Checkboxes', () => {
 

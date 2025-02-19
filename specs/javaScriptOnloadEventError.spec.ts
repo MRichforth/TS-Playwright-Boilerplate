@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {JavaScriptOnloadEventErrorPage, TConsoleErrorData} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/javascript.onload.event.error.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {JavaScriptOnloadEventErrorPage, TConsoleErrorData} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/javascript.onload.event.error.page";
 
 test.describe('Available Examples - JavaScript onload event error', () => {
 

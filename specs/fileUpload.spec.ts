@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {FileUploadPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/file.upload.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FileUploadPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/file.upload.page";
 
 test.describe('Available Examples - File Upload', () => {
 

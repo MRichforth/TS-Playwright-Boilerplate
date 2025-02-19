@@ -1,6 +1,6 @@
 import {defineConfig, devices} from '@playwright/test';
 import * as dotenv from 'dotenv';
-import {defaultTimeouts} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages";
+import {defaultTimeouts} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages";
 
 dotenv.config();
 

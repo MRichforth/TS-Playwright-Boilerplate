@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {ChallengingDomPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/challenging.dom.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {ChallengingDomPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/challenging.dom.page";
 
 test.describe('Available Examples - Challenging DOM', () => {
 

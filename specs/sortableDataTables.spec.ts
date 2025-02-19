@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {SortableDataTablesPage, TTableUserTypes} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/sortable.data.tables.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {SortableDataTablesPage, TTableUserTypes} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/sortable.data.tables.page";
 
 test.describe('Available Examples - Sortable Data Tables', () => {
 

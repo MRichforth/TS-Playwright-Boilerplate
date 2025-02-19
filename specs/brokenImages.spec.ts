@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {BrokenImagesPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/broken.images.page";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {BrokenImagesPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/broken.images.page";
 
 test.describe('Available Examples - Broken Images', () => {
 

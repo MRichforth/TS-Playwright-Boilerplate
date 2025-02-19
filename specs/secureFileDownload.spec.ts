@@ -1,8 +1,8 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
-import {SecureFileDownloadPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/secure.file.download.page";
-import {CommonHelper} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/helpers/common.helper";
+import {BasePage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {SecureFileDownloadPage} from "@mrichforth/ts-playwright-boilerplate-framework/dist/pages/secure.file.download.page";
+import {CommonHelper} from "@mrichforth/ts-playwright-boilerplate-framework/dist/helpers/common.helper";
 
 test.describe('Available Examples - Secure File Download', () => {
 
