@@ -60,7 +60,21 @@ The following variables should be added to the .env file for this project to wor
 
 ## Project structure
 
-
+- [**.github**](.github) folder
+  - Contains all github workflow yaml files for using Github Actions.
+- [**.husky**](.husky) folder
+  - Contains a file that is responsible for executing any command specified in this file in the pre-commit hook.
+- [**spec**](specs) folder
+     - In this folder are created spec files that contain scenarios in the order corresponding to sections of the web application The Internet
+ - [**framework**](framework) folder
+   - [**helpers**](framework/helpers) folder
+     - Contains all related files required for configuration and correct functioning of the project.
+    - [**pages**](framework/pages) folder
+      - Contains page files that include classes and methods in the order corresponding to the spec files and sections of The Internet web application.
+   - [**testData**](framework/testData) folder
+     - Contains files used in the process of test execution
+ - [**docker-compose.yaml**](docker-compose.yml)
+   - Responsible for local deployment and running tests using Docker
 
 ***
 
