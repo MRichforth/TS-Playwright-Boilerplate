@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {DynamicLoadingPage} from "../framework/pages/dynamic.loading.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {DynamicLoadingPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/dynamic.loading.page";
 
 test.describe('Available Examples - Dynamic Loading', () => {
 

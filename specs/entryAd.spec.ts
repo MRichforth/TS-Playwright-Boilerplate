@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {EntryAdPage, TEntryModalContentType} from "../framework/pages/entry.ad.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {EntryAdPage, TEntryModalContentType} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/entry.ad.page";
 
 test.describe('Available Examples - Entry Ad', () => {
 

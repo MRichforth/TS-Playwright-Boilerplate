@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {GeolocationPage} from "../framework/pages/geolocation.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {GeolocationPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/geolocation.page";
 
 test.describe('Available Examples - Geolocation', () => {
 

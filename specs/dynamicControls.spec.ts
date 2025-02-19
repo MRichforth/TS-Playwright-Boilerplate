@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {DynamicControlsPage} from "../framework/pages/dynamic.controls.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {DynamicControlsPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/dynamic.controls.page";
 
 test.describe('Available Examples - Dynamic Controls', () => {
 

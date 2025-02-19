@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {ABTestingPage} from "../framework/pages/a.b.testing.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {ABTestingPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/a.b.testing.page";
 
 test.describe('Available Examples - A/B Testing', () => {
 

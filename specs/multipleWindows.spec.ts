@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {MultipleWindowsPage} from "../framework/pages/multiple.windows.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {MultipleWindowsPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/multiple.windows.page";
 
 test.describe('Available Examples - Multiple Windows', () => {
 

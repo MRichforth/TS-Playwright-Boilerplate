@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {HoversPage} from "../framework/pages/hovers.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {HoversPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/hovers.page";
 
 test.describe('Available Examples - Hovers', () => {
 

@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {FileDownloadPage} from "../framework/pages/file.download.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {FileDownloadPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/file.download.page";
 
 test.describe('Available Examples - File Download', () => {
 

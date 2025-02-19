@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {DynamicContentPage, TStaticRowTypes} from "../framework/pages/dynamic.content.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {DynamicContentPage, TStaticRowTypes} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/dynamic.content.page";
 
 test.describe('Available Examples - Dynamic Content', () => {
 

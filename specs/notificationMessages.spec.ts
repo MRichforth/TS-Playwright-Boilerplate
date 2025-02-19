@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {NotificationMessagesPage} from "../framework/pages/notification.messages.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {NotificationMessagesPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/notification.messages.page";
 
 test.describe('Available Examples - Notification Messages', () => {
 

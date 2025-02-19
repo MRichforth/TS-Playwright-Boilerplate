@@ -1,7 +1,7 @@
 import {test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {ForgotPasswordPage} from "../framework/pages/forgot.password.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {ForgotPasswordPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/forgot.password.page";
 
 // Scenario cannot be covered due to Internal Server Error
 test.describe.skip('Available Examples - Forgot Password', () => {
