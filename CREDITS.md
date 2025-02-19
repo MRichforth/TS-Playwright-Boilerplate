@@ -1,4 +1,4 @@
-# [ISC License](https://spdx.org/licenses/ISC)
+# CREDITS
 
 This project uses the following Docker images:
 
