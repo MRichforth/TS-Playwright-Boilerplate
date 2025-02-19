@@ -21,10 +21,24 @@ Also during the process of working on this project the following goals were set:
 
 ## Technologies Stack
 
-
+ - **Programming Language**: `TypeScript`
+ - **Automation Framework**: `Playwright`
+ - **Reporting tool**: `Allure`, `Playwright`
+ - **Additional technologies used**:
+   - `GH Actions`
+   - `Docker`
+   - `Amazon S3`
 ***
 
 ### Project configuration
+
+ - Git clone
+ - npm install
+ - npx playwright install
+
+ .env creation
+
+
 ***
 
 ### Project structure
