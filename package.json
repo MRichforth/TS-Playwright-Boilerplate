@@ -2,7 +2,7 @@
   "name": "ts-playwright-boilerplate",
   "version": "2.0.0",
   "author": "Maksym Kuznetsov",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Project created by Maksym Kuznetsov to showcase capabilities of using Playwright framework, as well as to demonstrate integration of different technologies to enhance and optimize both the testing process and results delivery.",
   "homepage": "https://github.com/MRichforth/TS-Playwright-Boilerplate#readme",
   "repository": {
