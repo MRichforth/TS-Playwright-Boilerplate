@@ -1,4 +1,13 @@
-# Overview [![Playwright Tests](https://github.com/MRichforth/TS-Playwright-Boilerplate/actions/workflows/deploy-and-run-in-docker.yml/badge.svg?branch=main)](https://github.com/MRichforth/TS-Playwright-Boilerplate/blob/main/.github/workflows/deploy-and-run-in-docker.yml)
+# TS Playwright Boilerplate
+
+[![Playwright Tests](https://github.com/MRichforth/TS-Playwright-Boilerplate/actions/workflows/deploy-and-run-in-docker.yml/badge.svg?branch=main)](https://github.com/MRichforth/TS-Playwright-Boilerplate/blob/main/.github/workflows/deploy-and-run-in-docker.yml)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Playwright](https://img.shields.io/badge/-playwright-%232EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Amazon S3](https://img.shields.io/badge/Amazon%20S3-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 ***
 
 ## Technologies Stack
