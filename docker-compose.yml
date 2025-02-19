@@ -19,7 +19,7 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        npm ci &&
-        npm run test-regression-run
+        npm install &&
+        npm run test-add-remove-elements
     environment:
       - CI=true

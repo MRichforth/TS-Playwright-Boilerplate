@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import * as allure from "allure-js-commons";
-import {BasePage} from "../framework/pages/base.page";
-import {AddRemoveElementsPage} from "../framework/pages/add.remove.elements.page";
+import {BasePage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/base.page";
+import {AddRemoveElementsPage} from "@mrichforth-boilerplates/ts-playwright-boilerplate-framework/dist/pages/add.remove.elements.page";
 
 test.describe('Available Examples - Add/Remove Elements', () => {
 
