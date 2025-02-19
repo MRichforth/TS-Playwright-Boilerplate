@@ -19,7 +19,7 @@ Also during the process of working on this project the following goals were set:
 - [ ] Create an NPM library based on page object files for investigation purposes as well as to address scaling issues of the project using the methods of this project for other repositories 
 ***
 
-## Technologies Stack
+## Technologies stack
 
 The following technologies were used to develop the project:
  - **Programming Language**: `TypeScript`
@@ -70,7 +70,7 @@ The following variables should be added to the .env file for this project to wor
 ### GitHub Actions
 ***
 
-## CREDITS
+## Credits
 
 This project uses the following Docker images:
 
