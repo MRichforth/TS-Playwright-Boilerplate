@@ -31,7 +31,7 @@ The following technologies were used to develop the project:
    - `Amazon S3`
 ***
 
-### Project configuration
+## Project configuration
 
 In order to start executing automated scenarios, the following steps should be performed:
 1. Clone repository
@@ -58,16 +58,19 @@ The following variables should be added to the .env file for this project to wor
 
 ***
 
-### Project structure
+## Project structure
+
+
+
 ***
 
-### Run tests
+## Run tests
 ***
 
-### Observe results
+## Observe results
 ***
 
-### GitHub Actions
+## GitHub Actions
 ***
 
 ## Credits
