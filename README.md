@@ -51,10 +51,10 @@ npx playwright install
 
 The following variables should be added to the .env file for this project to work successfully:
 
-| **NAME**   |                       **VALUE**                       | **Required** |                                                                                                                                                                      **Purpose**              |
-|------------|:-----------------------------------------------------:|-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| `CI`       |                        `true`                         |        false |                                                                                                                                              Responsible for running tests in `HEADLESS` mode |
-| `ENV_URL`  | **https://the-internet.herokuapp.com** or `localhost` |         true | Responsible for URL of web application to be tested. In case the environment is deployed using Docker on your local machine, you need to specify the port, for example http://localhost:7080. |
+|   **NAME**   |                             **VALUE**                             | **Required**  | **Purpose**                                                                                                                                                                                   |
+|:------------:|:-----------------------------------------------------------------:|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     `CI`     |                              `true`                               |     false     | Responsible for running tests in `HEADLESS` mode                                                                                                                                              |
+|  `ENV_URL`   | **https://the-internet.herokuapp.com** <br/>or <br/>`localhost`   |     true      | Responsible for URL of web application to be tested. In case the environment is deployed using Docker on your local machine, you need to specify the port, for example http://localhost:7080. |
 
 ***
 
