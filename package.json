@@ -66,7 +66,7 @@
     "test-status-codes": "npx playwright test specs/statusCodes.spec.ts",
     "test-typos": "npx playwright test specs/typos.spec.ts",
     "test-regression-run": "npx playwright test specs  --workers=2",
-    "alllure-generate": "allure generate ./artifacts/allure-results -o ./artifacts/allure-report --clean"
+    "alllure-generate": "allure generate ./allure-results -o ./allure-report --clean"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
