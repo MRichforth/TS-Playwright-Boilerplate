@@ -18,7 +18,7 @@ services:
     working_dir: /workspace
     entrypoint: ["/bin/sh", "-c"]
     command:
-      - |
-        npm run test-regression-run
+      - npm run ${SUITE}
     environment:
       - CI=true
+      - WORKERS=${WORKERS}

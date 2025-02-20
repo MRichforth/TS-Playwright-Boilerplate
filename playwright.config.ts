@@ -12,7 +12,7 @@ export default defineConfig({
     reportSlowTests: null,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 1 : 0,
-    workers: process.env.CI ? 1 : 1,
+    workers: process.env.WORKERS ? parseInt(process.env.WORKERS) : 1,
     snapshotDir: './snapshots',
     reporter: [
         [process.env.CI ? 'github' : 'dot'],

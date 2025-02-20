@@ -6,6 +6,62 @@ on:
       - opened
       - synchronize
   workflow_dispatch:
+    inputs:
+      suite:
+        description: 'Choose suite to launch'
+        required: false
+        default: 'test-regression-run'
+        type: choice
+        options:
+          - test-regression-run
+          - test-ab-testing
+          - test-add-remove-elements
+          - test-basic-auth
+          - test-broken-images
+          - test-challenging-dom
+          - test-checkboxes
+          - test-context-menu
+          - test-digest-auth
+          - test-disappearing-elements
+          - test-drag-and-drop
+          - test-dropdown-list
+          - test-dynamic-content
+          - test-dynamic-controls
+          - test-dynamic-loading
+          - test-entry-ad
+          - test-exit-intent
+          - test-file-download
+          - test-file-upload
+          - test-floating-menu
+          - test-forgot-password
+          - test-form-authentication
+          - test-frames
+          - test-geolocation
+          - test-horizontal-slider
+          - test-hovers
+          - test-infinite-scroll
+          - test-inputs
+          - test-jquery-ui-menus
+          - test-javascript-alerts
+          - test-javascript-onload-event-error
+          - test-key-presses
+          - test-large-and-deep-dom
+          - test-multiple-windows
+          - test-nested-frames
+          - test-notification-messages
+          - test-redirect-link
+          - test-secure-file-download
+          - test-shadow-dom
+          - test-shifting-content
+          - test-slow-resources
+          - test-sortable-data-tables
+          - test-status-codes
+          - test-typos
+      workers:
+        description: 'Choose number of workers'
+        required: false
+        default: 2
+        type: number
 
 jobs:
 
@@ -71,7 +127,12 @@ jobs:
         run: docker compose version
 
       - name: Deploy app & run tests
-        run: docker compose up --abort-on-container-exit
+        run: |
+          suite=${{ github.event.inputs.workers || 'test-regression-run' }}
+          workers=${{ github.event.inputs.workers || 2 }}
+          echo "Running Playwright suite: $suite"
+          echo "Number of workers: $workers"
+          SUITE=$suite WORKERS=$workers docker compose up --abort-on-container-exit
 
       - name: Upload Allure Results
         uses: actions/upload-artifact@v4
