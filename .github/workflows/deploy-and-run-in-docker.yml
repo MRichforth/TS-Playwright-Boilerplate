@@ -96,7 +96,7 @@ jobs:
 
       - name: Deploy app & run tests
         run: |
-          suite=${{ github.event.inputs.workers || 'test-regression-run' }}
+          suite=${{ github.event.inputs.suite || 'test-regression-run' }}
           workers=${{ github.event.inputs.workers || 2 }}
           echo "Running Playwright suite: $suite"
           echo "Number of workers: $workers"
