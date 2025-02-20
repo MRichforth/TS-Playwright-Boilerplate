@@ -70,7 +70,7 @@
     "lint": "npx eslint ."
   },
   "dependencies": {
-    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.2",
+    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.4",
     "@eslint/js": "^9.20.0",
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.4",
