@@ -21,3 +21,4 @@ services:
       - npm run ${SUITE}
     environment:
       - CI=true
+      - WORKERS=${WORKERS}

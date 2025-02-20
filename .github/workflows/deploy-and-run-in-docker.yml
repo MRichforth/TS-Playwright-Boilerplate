@@ -57,6 +57,11 @@ on:
           - test-sortable-data-tables
           - test-status-codes
           - test-typos
+      workers:
+        description: 'Choose number of workers'
+        required: false
+        default: 2
+        type: number
 
 jobs:
 
@@ -123,9 +128,11 @@ jobs:
 
       - name: Deploy app & run tests
         run: |
-          suite="${{ github.event.inputs.suite }}"
+          suite=${{ github.event.inputs.workers || 'test-regression-run' }}
+          workers=${{ github.event.inputs.workers || 2 }}
           echo "Running Playwright suite: $suite"
-          SUITE=$suite docker compose up --abort-on-container-exit
+          echo "Number of workers: $workers"
+          SUITE=$suite WORKERS=$workers docker compose up --abort-on-container-exit
 
       - name: Upload Allure Results
         uses: actions/upload-artifact@v4

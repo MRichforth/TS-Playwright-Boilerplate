@@ -65,7 +65,7 @@
     "test-sortable-data-tables": "npx playwright test specs/sortableDataTables.spec.ts",
     "test-status-codes": "npx playwright test specs/statusCodes.spec.ts",
     "test-typos": "npx playwright test specs/typos.spec.ts",
-    "test-regression-run": "npx playwright test specs  --workers=2",
+    "test-regression-run": "npx playwright test specs",
     "alllure-generate": "allure generate ./allure-results -o ./allure-report --clean"
   },
   "dependencies": {
