@@ -11,8 +11,9 @@ on:
         description: 'Choose suite to launch'
         required: false
         default: 'test-regression-run'
-        type: string
+        type: choice
         options:
+          - test-regression-run
           - test-ab-testing
           - test-add-remove-elements
           - test-basic-auth
@@ -122,9 +123,9 @@ jobs:
 
       - name: Deploy app & run tests
         run: |
-          suite="${{ github.event.inputs.version }}"
-          echo "Running tests for version: $suite"
-          docker compose up --abort-on-container-exit -e SUITE=$suite
+          suite="${{ github.event.inputs.suite }}"
+          echo "Running Playwright suite: $suite"
+          SUITE=$suite docker compose up --abort-on-container-exit
 
       - name: Upload Allure Results
         uses: actions/upload-artifact@v4
