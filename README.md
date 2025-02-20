@@ -129,6 +129,10 @@ As a result of this command, the `allure-report` folder will be created. Open th
 ## GitHub Actions
 Project has the ability to run scenarios using GitHub Actions
 
+A sample GitHub Actions workflow diagram for this project is as follows:
+
+![GitHub Actions Diagram Example](src/github-actions-diagram.png)
+
 In the `Actions` tab you can see a workflow called `(Docker-compose) Playwright Regression Tests`
 
 This workflow is automatically triggered for **each created PR in the project**, as well as for each **subsequent commit** in that PR, and also this workflow can be **triggered manually**
