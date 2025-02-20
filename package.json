@@ -66,10 +66,11 @@
     "test-status-codes": "npx playwright test specs/statusCodes.spec.ts",
     "test-typos": "npx playwright test specs/typos.spec.ts",
     "test-regression-run": "npx playwright test specs",
-    "alllure-generate": "allure generate ./allure-results -o ./allure-report --clean"
+    "alllure-generate": "allure generate ./allure-results -o ./allure-report --clean",
+    "lint": "npx eslint ."
   },
   "dependencies": {
-    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.1",
+    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.2",
     "@eslint/js": "^9.20.0",
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.4",

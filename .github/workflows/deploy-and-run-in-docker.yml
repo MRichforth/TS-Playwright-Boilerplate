@@ -65,39 +65,7 @@ on:
 
 jobs:
 
-  lint:
-    runs-on: [ self-hosted, linux, X64 ]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@mrichforth'
-
-      - name: Cache Node.js Modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            node-modules-${{ runner.os }}-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run ESLint
-        run: npx eslint .
-        continue-on-error: false
-
   deploy-and-run:
-    if: always()
-    needs: [ lint ]
     runs-on: [ self-hosted, linux, X64 ]
 
     steps:
@@ -128,7 +96,7 @@ jobs:
 
       - name: Deploy app & run tests
         run: |
-          suite=${{ github.event.inputs.workers || 'test-regression-run' }}
+          suite=${{ github.event.inputs.suite || 'test-regression-run' }}
           workers=${{ github.event.inputs.workers || 2 }}
           echo "Running Playwright suite: $suite"
           echo "Number of workers: $workers"
