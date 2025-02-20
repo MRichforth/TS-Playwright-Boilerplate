@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   localhost-app:
     image: gprestes/the-internet:latest
