@@ -76,7 +76,7 @@
     "@types/node": "^22.13.5",
     "allure-playwright": "^3.2.0",
     "dotenv": "^16.4.7",
-    "eslint": "^9.20.1",
+    "eslint": "^9.21.0",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "typescript": "^5.7.3",
