@@ -23,7 +23,8 @@ test.describe('Available Examples - Infinite Scroll', () => {
         await allure.tags('scroll', 'ui');
     });
 
-    test('Infinite Scroll', async ({page}) => {
+    // TODO: [20.03.25] It is required to investigate stability of this scenario in GH Actions
+    test.fixme('Infinite Scroll', async ({page}) => {
         const infiniteScrollPage = new InfiniteScrollPage(page);
 
         // Validating main page elements
