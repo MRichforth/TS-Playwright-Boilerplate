@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@mrichforth/ts-playwright-boilerplate-framework": "1.2.6",
-    "@eslint/js": "^9.21.0",
+    "@eslint/js": "^9.22.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.5",
     "allure-playwright": "^3.2.0",
