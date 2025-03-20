@@ -1,6 +1,6 @@
 {
   "name": "ts-playwright-boilerplate",
-  "version": "2.0.0",
+  "version": "3.0.3",
   "author": "Maksym Kuznetsov",
   "license": "MIT",
   "description": "Project created by Maksym Kuznetsov to showcase capabilities of using Playwright framework, as well as to demonstrate integration of different technologies to enhance and optimize both the testing process and results delivery.",
@@ -70,7 +70,7 @@
     "lint": "npx eslint ."
   },
   "dependencies": {
-    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.6",
+    "@mrichforth/ts-playwright-boilerplate-framework": "1.2.7",
     "@eslint/js": "^9.22.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.10",
