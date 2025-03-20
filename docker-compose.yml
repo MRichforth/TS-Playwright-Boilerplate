@@ -7,7 +7,7 @@ services:
     restart: always
 
   playwright-tests:
-    image: mcr.microsoft.com/playwright:v1.50.1
+    image: mcr.microsoft.com/playwright:v1.51.1
     container_name: playwright-tests
     depends_on:
       - localhost-app
